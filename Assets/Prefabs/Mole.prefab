@@ -245,4 +245,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac59681d35d059448bbfdb649cd4f8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beaten: {fileID: 1470782821939204, guid: 6e455cf22bda891469d8bbae1b1aaee8, type: 3}
+  beatenPrefab: {fileID: 1470782821939204, guid: 6e455cf22bda891469d8bbae1b1aaee8, type: 3}
+  idx: 0

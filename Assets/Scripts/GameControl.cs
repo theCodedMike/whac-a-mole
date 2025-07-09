@@ -4,24 +4,24 @@ using Random = UnityEngine.Random;
 
 public class GameControl : MonoBehaviour
 {
-    public GameObject gopher;
+    public GameObject gopherPrefab;
     // 记录地鼠的x, y坐标
     public int posX, posY;
     
-    private Hole[] _holes;
+    public Hole[] holes;
 
 
     private void Awake()
     {
         posX = -2;
         posY = -2;
-        _holes = new Hole[9];
+        holes = new Hole[9];
         for (int i = 0; i < 3; i++)
         {
             for (int j = 0; j < 3; j++)
             {
                 int idx = i * 3 + j;
-                _holes[idx] = new Hole()
+                holes[idx] = new Hole()
                 {
                     HoleX = posX,
                     HoleY = posY,
@@ -37,19 +37,26 @@ public class GameControl : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating(nameof(CanSpawn), 0,  10);
+        InvokeRepeating(nameof(SpawnMany), 0,  10);
+        //Spawn();
     }
 
     // 生成地鼠
     public void Spawn()
     {
         int i = Random.Range(0, 9);
-        print($"{_holes[i].HoleX}, {_holes[i].HoleY}");
-        Instantiate(gopher, new Vector3(_holes[i].HoleX, _holes[i].HoleY + 0.4f, -0.1f), Quaternion.identity);
+        while (holes[i].IsAppear)
+            i = Random.Range(0, 9);
+        
+        print($"{holes[i].HoleX}, {holes[i].HoleY}");
+        GameObject gopher = Instantiate(gopherPrefab, new Vector3(holes[i].HoleX, holes[i].HoleY + 0.4f, -0.1f), Quaternion.identity);
+        gopher.GetComponent<Gopher>().idx = i;
+        
+        holes[i].IsAppear = true;
     }
 
     // 
-    public void CanSpawn()
+    public void SpawnMany()
     {
         InvokeRepeating(nameof(Spawn), 0, 1);
     }
