@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1552775069972298
+--- !u!1 &1470782821939204
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4165159141996174}
-  - component: {fileID: 212359392106328298}
-  - component: {fileID: 61907437626825506}
-  - component: {fileID: 82067481028186132}
-  - component: {fileID: 745964301433415489}
+  - component: {fileID: 4977155987526522}
+  - component: {fileID: 212524150564364308}
+  - component: {fileID: 82626452385523656}
+  - component: {fileID: 7032684436955645105}
   m_Layer: 0
-  m_Name: Mole
+  m_Name: Mole_beaten
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4165159141996174
+--- !u!4 &4977155987526522
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552775069972298}
+  m_GameObject: {fileID: 1470782821939204}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.0727046, y: 0.05239729, z: -0.41992188}
@@ -35,13 +34,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &212359392106328298
+--- !u!212 &212524150564364308
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552775069972298}
+  m_GameObject: {fileID: 1470782821939204}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e0d6d8e47db3d664fb6d34fd6baf879f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 54b258dcb870d884eae7c940d6176e11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,64 +89,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &61907437626825506
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552775069972298}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.75}
-    newSize: {x: 1, y: 0.75}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.75}
-  m_EdgeRadius: 0
---- !u!82 &82067481028186132
+--- !u!82 &82626452385523656
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552775069972298}
+  m_GameObject: {fileID: 1470782821939204}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 54b118d9153f42c4eae096a5d5f04039, type: 3}
-  m_Resource: {fileID: 8300000, guid: 54b118d9153f42c4eae096a5d5f04039, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a90989587a2ef0d41ae4dc06fc162545, type: 3}
+  m_Resource: {fileID: 8300000, guid: a90989587a2ef0d41ae4dc06fc162545, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -233,16 +186,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &745964301433415489
+--- !u!114 &7032684436955645105
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1552775069972298}
+  m_GameObject: {fileID: 1470782821939204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac59681d35d059448bbfdb649cd4f8aa, type: 3}
+  m_Script: {fileID: 11500000, guid: b7ad186bb1effff43a0e6b4313e7964a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  beaten: {fileID: 1470782821939204, guid: 6e455cf22bda891469d8bbae1b1aaee8, type: 3}
