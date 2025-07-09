@@ -9,8 +9,14 @@ public class GameControl : MonoBehaviour
     public int posX, posY;
     
     public Hole[] holes;
-
-
+    // 计时器标签
+    public TextMesh timeLabel;
+    // 时间
+    public float time = 30f;
+    // 分数
+    public int score = 0;
+    
+    
     private void Awake()
     {
         posX = -2;
@@ -38,10 +44,9 @@ public class GameControl : MonoBehaviour
     private void Start()
     {
         InvokeRepeating(nameof(SpawnMany), 0,  10);
-        //Spawn();
     }
 
-    // 生成地鼠
+    // 生成一只地鼠
     public void Spawn()
     {
         int i = Random.Range(0, 9);
@@ -55,10 +60,29 @@ public class GameControl : MonoBehaviour
         holes[i].IsAppear = true;
     }
 
-    // 
+    // 生成许多地鼠
     public void SpawnMany()
     {
         InvokeRepeating(nameof(Spawn), 0, 1);
+    }
+
+    private void Update()
+    {
+        time -= Time.deltaTime;
+        timeLabel.text = $"Time : {time:F1}";
+        
+        if(time < 0)
+            GameOver();
+    }
+
+
+    private void GameOver()
+    {
+        time = 0;
+        timeLabel.text = $"Time : 0";
+        
+        // 将所有延时调用函数取消
+        CancelInvoke();
     }
 }
 
