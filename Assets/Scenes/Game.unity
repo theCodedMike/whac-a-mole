@@ -445,11 +445,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gopherPrefab: {fileID: 1552775069972298, guid: 8da646b83b948d7428e74135d771583f, type: 3}
-  posX: 0
-  posY: 0
   timeLabel: {fileID: 1891255392}
-  time: 10
+  time: 30
   score: 0
+  gameOver: 0
+  count: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
